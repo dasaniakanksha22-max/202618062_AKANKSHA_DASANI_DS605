@@ -1,31 +1,9 @@
 # DS605 – Lab Assignment 1: Data Scraping and Preprocessing
 
-**Course:** DS605 – Fundamentals of Machine Learning
-**Name:** *Akanksha Dasani*
-**Student ID:** *202618062*
-
----
-
 ## Project Description
 
 This project demonstrates a complete data scraping and preprocessing workflow using Python and Scrapy. The objective was to collect book information from the Books to Scrape website, clean and preprocess the collected data, create meaningful visualizations, and analyze the dataset to identify useful insights.
 
----
-
-## Website Used
-
-https://books.toscrape.com/
-
----
-
-## Tools and Libraries
-
-* Python
-* Scrapy
-* Pandas
-* NumPy
-* Matplotlib
-* WordCloud
 
 ---
 
@@ -95,12 +73,6 @@ The Scrapy spider visits multiple catalogue pages and extracts information for e
 * Number of Reviews
 * Product URL
 
-**Summary**
-
-* Total records scraped: **_____**
-* Missing values found: **_____**
-* Duplicate UPCs: **_____**
-
 ---
 
 ## Task 2 – Data Preprocessing
@@ -150,13 +122,6 @@ Based on the analysis of the scraped dataset, the following observations were ma
 
 ---
 
-## Conclusion
-
-This project successfully demonstrated the complete data scraping and preprocessing workflow using Python and Scrapy. Book information was collected from the website, cleaned and transformed into a structured dataset, and analyzed using visualizations and feature engineering. The results show that book ratings are not strongly influenced by price and that several affordable books receive high ratings, making them good value choices. Overall, the project provided practical experience in web scraping, data cleaning, exploratory data analysis, and data visualization while highlighting the importance of preparing data before performing meaningful analysis.
-
-This version is professional, human-written, and appropriate for a DS605 lab assignment.
-
----
 
 ## Limitations
 
@@ -178,4 +143,5 @@ This version is professional, human-written, and appropriate for a DS605 lab ass
 
 ## Conclusion
 
-This assignment demonstrates the complete process of collecting data from a website, cleaning and transforming it, creating meaningful visualizations, and extracting useful insights using Python and Scrapy.
+This project successfully demonstrated the complete data scraping and preprocessing workflow using Python and Scrapy. Book information was collected from the website, cleaned and transformed into a structured dataset, and analyzed using visualizations and feature engineering. The results show that book ratings are not strongly influenced by price and that several affordable books receive high ratings, making them good value choices. Overall, the project provided practical experience in web scraping, data cleaning, exploratory data analysis, and data visualization while highlighting the importance of preparing data before performing meaningful analysis.
+

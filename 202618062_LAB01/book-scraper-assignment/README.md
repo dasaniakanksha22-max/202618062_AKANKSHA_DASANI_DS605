@@ -1,13 +1,11 @@
-# DS605 – Lab Assignment 1: Data Scraping and Preprocessing
 
-## Project Description
+# Project Overview
 
-This project demonstrates a complete data scraping and preprocessing workflow using Python and Scrapy. The objective was to collect book information from the Books to Scrape website, clean and preprocess the collected data, create meaningful visualizations, and analyze the dataset to identify useful insights.
-
+This project demonstrates the complete workflow of collecting, cleaning, analyzing, and visualizing data using Python and Scrapy. Book information was scraped from the Books to Scrape website, preprocessed into a clean dataset, and explored using different visualizations to identify meaningful patterns and insights.
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 .
@@ -21,6 +19,11 @@ This project demonstrates a complete data scraping and preprocessing workflow us
 │   ├── raw_books.csv
 │   └── cleaned_books.csv
 ├── plots/
+│   ├── price_distribution.png
+│   ├── rating_distribution.png
+│   ├── avg_price_by_category.png
+│   ├── price_vs_rating.png
+│   └── wordcloud.png
 ├── preprocessing.py
 ├── visualize.py
 ├── requirements.txt
@@ -29,15 +32,15 @@ This project demonstrates a complete data scraping and preprocessing workflow us
 
 ---
 
-## How to Run the Project
+# How to Run
 
-### 1. Install the required packages
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Scrape the book data
+### Task 1 – Scrape Book Data
 
 ```bash
 cd bookscraper
@@ -45,13 +48,13 @@ scrapy crawl books -o ../data/raw_books.csv
 cd ..
 ```
 
-### 3. Clean and preprocess the data
+### Task 2 – Preprocess Data
 
 ```bash
 python preprocessing.py
 ```
 
-### 4. Generate visualizations and analysis
+### Task 3 – Generate Visualizations
 
 ```bash
 python visualize.py
@@ -59,89 +62,79 @@ python visualize.py
 
 ---
 
-## Task 1 – Data Scraping
+# Task 1 – Data Scraping
 
-The Scrapy spider visits multiple catalogue pages and extracts information for each book, including:
+The Scrapy spider extracts the following information for each book:
 
-* Title
-* Category
-* Price
-* Rating
-* Availability
-* Product Description
-* UPC
-* Number of Reviews
-* Product URL
+- Title
+- Category
+- Price
+- Rating
+- Availability
+- Product Description
+- UPC
+- Number of Reviews
+- Product URL
 
----
+The scraped data is stored in:
 
-## Task 2 – Data Preprocessing
-
-The preprocessing script performs the following operations:
-
-* Removed unnecessary spaces and inconsistent text
-* Removed duplicate books using UPC
-* Handled missing descriptions
-* Converted prices into numeric values
-* Converted ratings from text to integers
-* Extracted available stock count
-* Created additional features:
-
-  * `description_word_count`
-  * `price_band`
-  * `affordability_score`
-  * `value_score`
-  * `recommended`
-
-The cleaned dataset is saved as **data/cleaned_books.csv**.
+```
+data/raw_books.csv
+```
 
 ---
 
-## Task 3 – Data Visualization
+# Task 2 – Data Preprocessing
 
-The following visualizations are generated and stored inside the **plots** folder:
+The preprocessing script performs the following tasks:
 
-* Price Distribution
-* Rating Distribution
-* Average Price by Category
-* Price vs Rating
-* Word Cloud of Book Descriptions
+- Removes unnecessary spaces and inconsistent formatting.
+- Handles missing descriptions.
+- Removes duplicate books using UPC.
+- Converts prices into numeric values.
+- Converts ratings from text into integers.
+- Extracts the available stock count.
+- Creates additional features:
+  - description_word_count
+  - price_band
+  - affordability_score
+  - value_score
+  - recommended
 
----
+The cleaned dataset is saved as:
 
-## Task 4 – Insights and Interpretation
-
-Based on the analysis of the scraped dataset, the following observations were made:
-
-1. Most books are moderately priced, with only a few books having very high prices.
-2. Ratings are concentrated between 3 and 5 stars, indicating that the majority of books on the website are well-rated.
-3. Some categories contain more books than others, making them the most represented categories in the dataset.
-4. There is no strong relationship between book price and rating. Higher-priced books do not consistently receive better ratings.
-5. Books with high ratings and lower prices achieved better value scores and can be considered better-value recommendations.
-6. The generated word cloud shows that common words in book descriptions are related to reading, life, love, adventure, and mystery, reflecting the overall themes of the available books.
-
----
-
-
-## Limitations
-
-* The dataset is collected from a demonstration website and represents only a single snapshot in time.
-* Customer review text is not available on the website, so book descriptions were used to generate the word cloud.
-* Some categories contain fewer books than others, which may affect category-wise comparisons.
+```
+data/cleaned_books.csv
+```
 
 ---
 
-## Output Files
+# Task 3 – Visualizations
 
-* `data/raw_books.csv`
-* `data/cleaned_books.csv`
-* Generated plots inside the `plots` folder
-* Word cloud image
-* Python scripts for scraping, preprocessing, and visualization
+The following plots are generated inside the **plots** folder:
+
+- Price Distribution
+- Rating Distribution
+- Average Price by Category
+- Price vs Rating
+- Word Cloud of Book Descriptions
 
 ---
 
-## Conclusion
+# Task 4 – Insights and Interpretation
 
-This project successfully demonstrated the complete data scraping and preprocessing workflow using Python and Scrapy. Book information was collected from the website, cleaned and transformed into a structured dataset, and analyzed using visualizations and feature engineering. The results show that book ratings are not strongly influenced by price and that several affordable books receive high ratings, making them good value choices. Overall, the project provided practical experience in web scraping, data cleaning, exploratory data analysis, and data visualization while highlighting the importance of preparing data before performing meaningful analysis.
+Based on the generated summary statistics and visualizations:
 
+- A total of **100 books** were analyzed.
+- The average book price is **£34.56**, while prices range from **£10.16** to **£58.11**.
+- The average book rating is approximately **3 out of 5**, indicating that most books have moderate ratings.
+- **Sequential Art** is the most represented category with **14 books**, followed by **Nonfiction (12 books)** and **Default (9 books)**.
+- The Price vs Rating visualization shows **no strong relationship** between book price and rating. Expensive books do not necessarily receive higher ratings.
+- The word cloud highlights frequently occurring words from book descriptions, giving an overview of common themes present in the dataset.
+
+
+---
+
+# Conclusion
+
+This project successfully demonstrates a complete data scraping and preprocessing pipeline using Python and Scrapy. The collected data was cleaned, transformed, and analyzed using summary statistics and visualizations. The analysis shows that book prices vary considerably, while ratings remain fairly consistent across different price ranges, suggesting that higher prices do not necessarily indicate better-rated books. Overall, the project provided practical experience in web scraping, data preprocessing, feature engineering, exploratory data analysis, and data visualization.

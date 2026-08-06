@@ -1,8 +1,8 @@
 # DS605 - Lab Assignment 1: Data Scraping and Preprocessing
 
 **Course:** DS605 - Fundamentals of Machine Learning
-**Name:** _<your name>_
-**ID:** _<your student ID>_
+**Name:** Akanksha Dasani
+**ID:** 202618062
 
 ## Project Overview
 This project builds an end-to-end data pipeline that:

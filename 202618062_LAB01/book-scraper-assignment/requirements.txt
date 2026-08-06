@@ -1,0 +1,6 @@
+scrapy
+pandas
+numpy
+matplotlib
+seaborn
+wordcloud

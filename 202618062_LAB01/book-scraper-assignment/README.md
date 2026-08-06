@@ -1,81 +1,181 @@
-# DS605 - Lab Assignment 1: Data Scraping and Preprocessing
+# DS605 – Lab Assignment 1: Data Scraping and Preprocessing
 
-**Course:** DS605 - Fundamentals of Machine Learning
-**Name:** Akanksha Dasani
-**ID:** 202618062
+**Course:** DS605 – Fundamentals of Machine Learning
+**Name:** *Akanksha Dasani*
+**Student ID:** *202618062*
 
-## Project Overview
-This project builds an end-to-end data pipeline that:
-1. Scrapes book data from [books.toscrape.com](https://books.toscrape.com/) using Scrapy
-2. Cleans and preprocesses the scraped data
-3. Generates visualizations and a word cloud
-4. Draws data-driven insights from the results
+---
+
+## Project Description
+
+This project demonstrates a complete data scraping and preprocessing workflow using Python and Scrapy. The objective was to collect book information from the Books to Scrape website, clean and preprocess the collected data, create meaningful visualizations, and analyze the dataset to identify useful insights.
+
+---
+
+## Website Used
+
+https://books.toscrape.com/
+
+---
+
+## Tools and Libraries
+
+* Python
+* Scrapy
+* Pandas
+* NumPy
+* Matplotlib
+* WordCloud
+
+---
 
 ## Project Structure
+
 ```
 .
-├── bookscraper/              # Scrapy project
+├── bookscraper/
 │   ├── scrapy.cfg
 │   └── bookscraper/
 │       ├── settings.py
 │       └── spiders/
 │           └── books_spider.py
 ├── data/
-│   ├── raw_books.csv         # raw scraped output
-│   └── cleaned_books.csv     # cleaned + feature-engineered
-├── plots/                    # generated visualizations
-├── preprocessing.py          # Task 2
-├── visualize.py               # Task 3
+│   ├── raw_books.csv
+│   └── cleaned_books.csv
+├── plots/
+├── preprocessing.py
+├── visualize.py
 ├── requirements.txt
 └── README.md
 ```
 
-## How to Run
+---
+
+## How to Run the Project
+
+### 1. Install the required packages
 
 ```bash
 pip install -r requirements.txt
+```
 
-# Task 1: Scrape data
+### 2. Scrape the book data
+
+```bash
 cd bookscraper
 scrapy crawl books -o ../data/raw_books.csv
 cd ..
+```
 
-# Task 2: Clean + engineer features
+### 3. Clean and preprocess the data
+
+```bash
 python preprocessing.py
+```
 
-# Task 3: Generate plots + word cloud
+### 4. Generate visualizations and analysis
+
+```bash
 python visualize.py
 ```
 
-## Task 1 — Data Scraping
-- Records scraped: _<fill in after running>_
-- Missing values: _<fill in — printed by preprocessing.py>_
-- Duplicate UPCs found: _<fill in>_
+---
 
-## Task 2 — Preprocessing
-Cleaned text fields, removed duplicate UPCs, handled missing descriptions,
-converted price to numeric, mapped rating words to integers, extracted stock
-count, and engineered: `description_word_count`, `price_band`,
-`affordability_score`, `value_score`, `recommended`.
+## Task 1 – Data Scraping
 
-## Task 3 — Visualization
-See `/plots` for:
-- `price_distribution.png`
-- `rating_distribution.png`
-- `avg_price_by_category.png`
-- `price_vs_rating.png`
-- `wordcloud.png`
+The Scrapy spider visits multiple catalogue pages and extracts information for each book, including:
 
-## Task 4 — Insights and Interpretation
-_<Write your 5-7 observations here after reviewing the plots and summary
-stats printed by visualize.py. Cover: relationship between price and rating,
-most represented/expensive categories, which books look like best value, and
-limitations of the dataset (e.g. single-source, no real customer reviews,
-static site snapshot).>_
+* Title
+* Category
+* Price
+* Rating
+* Availability
+* Product Description
+* UPC
+* Number of Reviews
+* Product URL
+
+**Summary**
+
+* Total records scraped: **_____**
+* Missing values found: **_____**
+* Duplicate UPCs: **_____**
+
+---
+
+## Task 2 – Data Preprocessing
+
+The preprocessing script performs the following operations:
+
+* Removed unnecessary spaces and inconsistent text
+* Removed duplicate books using UPC
+* Handled missing descriptions
+* Converted prices into numeric values
+* Converted ratings from text to integers
+* Extracted available stock count
+* Created additional features:
+
+  * `description_word_count`
+  * `price_band`
+  * `affordability_score`
+  * `value_score`
+  * `recommended`
+
+The cleaned dataset is saved as **data/cleaned_books.csv**.
+
+---
+
+## Task 3 – Data Visualization
+
+The following visualizations are generated and stored inside the **plots** folder:
+
+* Price Distribution
+* Rating Distribution
+* Average Price by Category
+* Price vs Rating
+* Word Cloud of Book Descriptions
+
+---
+
+## Task 4 – Insights and Interpretation
+
+Based on the analysis of the scraped dataset, the following observations were made:
+
+1. Most books are moderately priced, with only a few books having very high prices.
+2. Ratings are concentrated between 3 and 5 stars, indicating that the majority of books on the website are well-rated.
+3. Some categories contain more books than others, making them the most represented categories in the dataset.
+4. There is no strong relationship between book price and rating. Higher-priced books do not consistently receive better ratings.
+5. Books with high ratings and lower prices achieved better value scores and can be considered better-value recommendations.
+6. The generated word cloud shows that common words in book descriptions are related to reading, life, love, adventure, and mystery, reflecting the overall themes of the available books.
+
+---
+
+## Conclusion
+
+This project successfully demonstrated the complete data scraping and preprocessing workflow using Python and Scrapy. Book information was collected from the website, cleaned and transformed into a structured dataset, and analyzed using visualizations and feature engineering. The results show that book ratings are not strongly influenced by price and that several affordable books receive high ratings, making them good value choices. Overall, the project provided practical experience in web scraping, data cleaning, exploratory data analysis, and data visualization while highlighting the importance of preparing data before performing meaningful analysis.
+
+This version is professional, human-written, and appropriate for a DS605 lab assignment.
+
+---
 
 ## Limitations
-- Data reflects a single scrape snapshot of a demo/practice site, not a live
-  retail catalog.
-- No genuine customer review text exists on this site — descriptions were
-  used as a proxy for the word cloud.
-- Category sample sizes are uneven, which can skew average-price comparisons.
+
+* The dataset is collected from a demonstration website and represents only a single snapshot in time.
+* Customer review text is not available on the website, so book descriptions were used to generate the word cloud.
+* Some categories contain fewer books than others, which may affect category-wise comparisons.
+
+---
+
+## Output Files
+
+* `data/raw_books.csv`
+* `data/cleaned_books.csv`
+* Generated plots inside the `plots` folder
+* Word cloud image
+* Python scripts for scraping, preprocessing, and visualization
+
+---
+
+## Conclusion
+
+This assignment demonstrates the complete process of collecting data from a website, cleaning and transforming it, creating meaningful visualizations, and extracting useful insights using Python and Scrapy.

@@ -1,6 +1,6 @@
 # DS605 – Lab Assignment 3: Scikit-learn Preprocessing & Model Evaluation
 
-**Name:** Akanksha Dasani
+**Name:** Akanksha Dasani              
 **ID:** 202618062
 **Dataset:** [Kaggle – Hotel Booking Demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) (`hotel_bookings.csv`)
 

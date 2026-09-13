@@ -16,10 +16,11 @@
 
 ## 🌐 Deployed Web Application
 
-The interactive web application is deployed online on **Streamlit Community Cloud**:
+The interactive web application is deployed and live on **Streamlit Community Cloud**:
 
-> 🔗 **Live Application Link:** **[NYC Airbnb Price Predictor (Live App)](https://share.streamlit.io/)**  
-> *(Connect this GitHub repository to Streamlit Cloud to activate this direct URL, as outlined in the [Deployment Section](#-deployment-to-streamlit-community-cloud)).*
+> 🔗 **Live Application Link:** **[https://202618062akankshadasanids605-zdrexjggc6rbza6uah3yhb.streamlit.app/](https://202618062akankshadasanids605-zdrexjggc6rbza6uah3yhb.streamlit.app/)**
+>
+> 🚀 *Test out the model in real time: select any NYC borough, pick a neighborhood, adjust listing attributes, and get instant nightly price predictions!*
 
 ---
 

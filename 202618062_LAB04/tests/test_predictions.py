@@ -1,6 +1,4 @@
-"""
-test_predictions.py - Realistic inference test suite for DS605 Lab 4
-"""
+# Quick test script to verify model predictions on sample listings
 import sys
 import os
 import joblib

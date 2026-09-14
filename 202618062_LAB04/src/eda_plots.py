@@ -1,7 +1,4 @@
-"""
-eda_plots.py - Generate high-quality visualizations for EDA and Task 1 summary.
-Part of DS605 Lab Assignment 4.
-"""
+# Script to generate EDA visualization figures
 
 import os
 import numpy as np

@@ -1,7 +1,4 @@
-"""
-preprocess.py - Data Preprocessing and Feature Engineering Module
-Part of DS605 Lab Assignment 4: Airbnb Price Prediction
-"""
+# Preprocessing and feature engineering functions for NYC Airbnb dataset
 
 import numpy as np
 import pandas as pd

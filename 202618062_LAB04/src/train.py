@@ -1,7 +1,4 @@
-"""
-train.py - Regression Model Training, Comparison, Tuning, and Pipeline Persistence
-Part of DS605 Lab Assignment 4: Airbnb Price Prediction
-"""
+# Model training, comparison, and hyperparameter tuning for Airbnb price prediction
 
 import json
 import os

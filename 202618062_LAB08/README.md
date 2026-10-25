@@ -2,7 +2,7 @@
 ## Decision Trees and Support Vector Machines from Scratch
 
 **Dataset:** [UCI Banknote Authentication Dataset](https://archive.ics.uci.edu/ml/datasets/banknote+authentication) (1,372 samples, 4 continuous features, 2 classes)  
-**Submission:** Public GitHub Repository  
+ 
 
 ---
 
